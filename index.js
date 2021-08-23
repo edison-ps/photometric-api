@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 
 app.listen(ADHARA_API_PORT, () => console.log(`API online na porta ${ADHARA_API_PORT}`));
 
+// As rotas estão diretamente no index.js devido essa API estar sendendo excutada em um sistema que não possui o Express Route
+
 app.post('/login', userControllers.login);
 
 app.post('/users', validateToken, userControllers.create);
