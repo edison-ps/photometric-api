@@ -20,7 +20,7 @@ const compSchema = joi.object({
   ra: joi.string().required(),
   dec: joi.string().required(),
   mag: joi.number().required(),
-  chart: joi.string(),
+  chart: joi.string().allow('', null),
 });
 
 const validateComp = (comp) => {

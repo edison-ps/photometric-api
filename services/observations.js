@@ -28,7 +28,7 @@ const observationSchema = joi.object({
   jd: joi.number().required(),
   mag: joi.number().required(),
   mErr: joi.number().required(),
-  airMass: joi.number()
+  airMass: joi.number().allow('', null)
 });
 
 const querySchema = joi.object({
